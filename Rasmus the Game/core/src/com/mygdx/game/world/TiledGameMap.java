@@ -1,9 +1,9 @@
 package com.mygdx.game.world;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.maps.MapLayer;
 import com.badlogic.gdx.maps.MapProperties;
 import com.badlogic.gdx.maps.tiled.TiledMap;
-import com.badlogic.gdx.maps.tiled.TiledMapTile;
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
@@ -49,9 +49,8 @@ public class TiledGameMap extends GameMap {
     }
 
     @Override
-    public int getLayers() {
-        return tiledMap.getLayers().getCount();
+    public MapLayer getLayers(String layer) {return tiledMap.getLayers().get(layer);
     }
 
-    public MapProperties getProperties() {return tiledMap.getProperties();}
+    public MapProperties getProperties(){return tiledMap.getProperties();}
 }

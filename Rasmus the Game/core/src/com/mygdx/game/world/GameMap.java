@@ -1,6 +1,7 @@
 package com.mygdx.game.world;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.maps.MapLayer;
 
 public abstract class GameMap {
 
@@ -10,7 +11,7 @@ public abstract class GameMap {
 
     public abstract int getWidth();
     public abstract int getHeight();
-    public abstract int getLayers();
+    public abstract MapLayer getLayers(String layer);
 
 
 }
